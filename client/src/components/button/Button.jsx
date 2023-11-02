@@ -7,6 +7,7 @@ const MyButton = styled.button`
   border: none;
   padding: 0.5rem 1rem;
   border-radius: 5px;
+  cursor: pointer;
 `;
 
 function Button({ text, bgColor, color }) {

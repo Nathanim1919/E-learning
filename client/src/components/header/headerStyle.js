@@ -5,24 +5,74 @@ export const HeaderContainer = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 .5rem;
+    padding: 0 2rem;
+    position: fixed;
+    z-index: 15;
+    background-color: #fff;
+    left: 0;
+    right: 0;
 
-    .list-items, .list-items > ul{
+    .list-items, ul{
         display: flex;
         justify-content: space-between;
         align-items: center;
         gap: 2rem;
 
+         @media screen and (max-width: 768px){
+            gap: 0rem;
+         }
+
+
+
         >ul{
             font-weight: 500;
             list-style-type: none;
             color: #333;
+           
             >li{
                 cursor: pointer;
 
+                 @media screen and (max-width: 768px){
+                    width: 90%;
+                    padding: 1rem;
+                    font-size: 1.3rem;
+                    font-weight: 600;
+                 }
 
                 &:hover{
-                    color: blue;
+                    background-color: orange;
+                }
+            }
+
+            .close-icon{
+                display: none;
+            }
+            @media screen and (max-width: 768px) {
+                flex-direction: column;
+                position: fixed;
+                background-color: #fff;
+                top: 3rem;
+                left: 0;
+                padding: 1rem;
+                height: 60vh;
+                width: 100%;
+                z-index:10;
+                align-items: start;
+                overflow-x: hidden;
+
+                .close-icon {
+                    position: relative;
+                    left: -2rem;
+                    font-size: 1.3rem;
+                    display: flex;
+                    justify-content: flex-end;
+                    width: 100%;
+                    cursor: pointer;
+                    
+
+                    &:hover{
+                        color: orange;
+                    }
                 }
             }
         }

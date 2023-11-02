@@ -16,3 +16,13 @@ body {
   padding: 0 2rem;
   box-sizing: border-box;
 }
+
+
+
+
+@media screen and (max-width:768px) {
+  body{
+    padding: 0;
+    overflow-x: hidden;
+  }
+}

@@ -1,41 +1,47 @@
 import React from 'react'
-import {
-    FiSearch,
-    FiShoppingCart
-} from 'react-icons/fi'
+import { FiSearch, FiShoppingCart } from 'react-icons/fi'
 import Button from '../button/Button'
 import { HeaderContainer } from './headerStyle'
+import {AiOutlineClose} from 'react-icons/ai';
 
-function Header() {
+function Header () {
+  
+    
   return (
     <>
-    < HeaderContainer >
+      <HeaderContainer>
         <div className='list-items'>
-            <div>
-                <h2><span>e</span>-learn.</h2>
-            </div>
+          <div>
+            <h2>
+              <span>e</span>-learn.
+            </h2>
+          </div>
 
-            <ul>
-                <li>About</li>
-                <li>Courses</li>
-                <li>Blog</li>
-                <li>Reviews</li>
-                <li>Instructor</li>
-            </ul>
+          <ul>
+            <div className='close-icon'>
+                <AiOutlineClose/>
+            </div>
+            <li>About</li>
+            <li>Courses</li>
+            <li>Blog</li>
+            <li>Reviews</li>
+            <li>Instructor</li>
+
+          </ul>
         </div>
 
         <div className='call-icons'>
-            <div>
-                < FiSearch/>
-                < FiShoppingCart/>
-            </div>
+          <div>
+            <FiSearch />
+            <FiShoppingCart />
+          </div>
 
-            <div>
-                <Button text='Sign in' color="#333" bgColor="transparent"/>
-                <Button text='Register' color="#333" bgColor="orange"/>
-            </div>
+          <div>
+            <Button text='Sign in' color='#333' bgColor='transparent' />
+            <Button text='Register' color='#333' bgColor='orange' />
+          </div>
         </div>
-    </HeaderContainer>
+      </HeaderContainer>
     </>
   )
 }
