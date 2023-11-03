@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import {
     GrNext,
     GrPrevious
@@ -10,19 +10,25 @@ import {
     BsFillPersonFill,
     BsStar
 } from 'react-icons/bs';
-
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 import PcourseImg1 from '../../assets/courses/design.jpg'
 import PcourseImg2 from '../../assets/courses/gaming.jpg'
 import PcourseImg3 from '../../assets/courses/photo.jpg'
 import InstructorImg from '../../assets/instructors/instructor.jpg'
 
 function Courses() {
+useEffect(() => {
+    Aos.init({
+        duration: 1000
+    })
+}, [])
   return (
     <>
         <CourseContainer>
                 <div className='header'>
-                    <h1>Most popular Courses</h1>
-                    <div className='sliders'>
+                    <h1 data-aos="fade-right">Most popular Courses</h1>
+                    <div data-aos="fade=left" className='sliders'>
                         <div className='course-filter'>
                             <h4>Design</h4><BsChevronDown/>
                         </div>
@@ -38,7 +44,7 @@ function Courses() {
                 </div>
 
                 <div className='PopularCourses'>
-                    <div className='course'>
+                    <div className='course' data-aos="fade-up">
                         <img src={PcourseImg1} alt=''/>
                         <div className='content'>
                             <div  className='cost'>
@@ -68,7 +74,7 @@ function Courses() {
                             </div>
                         </div>
                     </div>
-                    <div className='course'>
+                    <div className='course' data-aos="fade-up">
                         <img src={PcourseImg2} alt=''/>
                         <div className='content'>
                             <div  className='cost'>
@@ -100,7 +106,7 @@ function Courses() {
                             </div>
                         </div>
                     </div>
-                    <div className='course'>
+                    <div className='course' data-aos="fade-up">
                         <img src={PcourseImg3} alt=''/>
                         <div className='content'>
                             <div  className='cost'>

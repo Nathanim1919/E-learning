@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import {
     GrNext,
     GrPrevious
@@ -15,8 +15,16 @@ import PcourseImg1 from '../../assets/courses/design.jpg'
 import PcourseImg2 from '../../assets/courses/gaming.jpg'
 import PcourseImg3 from '../../assets/courses/photo.jpg'
 import InstructorImg from '../../assets/instructors/instructor.jpg'
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 function TrendingCourses() {
+
+useEffect(() => {
+    Aos.init({
+        duration: 2000
+    })
+}, [])
   return (
     <>
         <CourseContainer>
@@ -35,7 +43,7 @@ function TrendingCourses() {
                 </div>
 
                 <div className='PopularCourses'>
-                    <div className='course'>
+                    <div className='course' data-aos="fade-up">
                         <img src={PcourseImg1} alt=''/>
                         <div className='content'>
                             <div  className='cost'>
@@ -65,7 +73,7 @@ function TrendingCourses() {
                             </div>
                         </div>
                     </div>
-                    <div className='course'>
+                    <div className='course' data-aos="fade-up">
                         <img src={PcourseImg2} alt=''/>
                         <div className='content'>
                             <div  className='cost'>
@@ -97,7 +105,7 @@ function TrendingCourses() {
                             </div>
                         </div>
                     </div>
-                    <div className='course'>
+                    <div className='course' data-aos="fade-up">
                         <img src={PcourseImg3} alt=''/>
                         <div className='content'>
                             <div  className='cost'>

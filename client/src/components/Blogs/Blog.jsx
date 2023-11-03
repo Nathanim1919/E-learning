@@ -1,21 +1,30 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import Button from '../button/Button';
 
 import PcourseImg1 from '../../assets/courses/design.jpg'
 import PcourseImg2 from '../../assets/courses/gaming.jpg'
 import PcourseImg3 from '../../assets/courses/photo.jpg'
 import { PostContainer } from './blogStyle';
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 function Blog() {
+
+  useEffect(() => {
+      Aos.init({
+          duration: 1000
+      })
+  }, [])
+
   return (
     <>
     <PostContainer>
         <div>
-            <h1>Our Latest Posts</h1>
+            <h1 data-aos="fade-right">Our Latest Posts</h1>
             <Button text={'More details'} bgColor={'blue'} color={'#fff'}/>
         </div>
 
-        <div className='posts'>
+        <div className='posts' data-aos="fade-up">
             <div className='post'>
                 <img src={PcourseImg1} alt=''/>
                 <div className='content'>

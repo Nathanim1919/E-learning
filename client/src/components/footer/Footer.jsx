@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import {
     FiSend,
 } from 'react-icons/fi';
@@ -10,11 +10,20 @@ import {
     BiLogoLinkedinSquare
 } from 'react-icons/bi'
 import { FooterContainer } from './footerStyle';
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 function Footer() {
+
+useEffect(() => {
+    Aos.init({
+        duration: 2000
+    })
+}, [])
+
   return (
     <>
-    <FooterContainer>
+    <FooterContainer data-aos="fade-up">
         <div>
             <h2><span>e</span>-learn</h2>
             <p>Top instructors from around the world<br/>teach millions of students.</p>

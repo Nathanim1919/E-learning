@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import Button from '../button/Button'
 import AboutUsImg from '../../assets/about/about.jpg'
 import { AboutContaienr } from './aboutStyle'
@@ -11,12 +11,19 @@ import {
 import {
   MdOutlineFreeCancellation
 } from 'react-icons/md'
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 function About() {
+  useEffect(() => {
+    Aos.init({
+      duration: 500
+    })
+  }, [])
   return (
     <>
       <AboutContaienr>
-            <div className='getTOKnow'>
+            <div className='getTOKnow' data-aos="fade-right">
               <h1>Get Know About Us</h1>
                 <div className='description-text'>
                     <p>You only have to know one thing that, you can learn anything, Anytime, anywhere to do discover yourself. Our content will help you every step, Anytime, anywhere to do discover yourself.</p>
@@ -29,9 +36,9 @@ function About() {
                 </div>
                 <Button text={'View More'} bgColor={'blue'} color={'#fff'}/>
             </div>
-            <div className='aboutImg'>
+            <div className='aboutImg' data-aos="fade-left">
                 <img src={AboutUsImg} alt=''/>
-                <div className='sloganBox'>
+                <div className='sloganBox' data-aos="zoom-in">
                   <div className='icon'>
                     <GrShieldSecurity/>
                   </div>
