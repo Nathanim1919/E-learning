@@ -5,7 +5,9 @@ export const FeatureContainer = styled.div`
     justify-content: space-between;
     align-items: center;
     padding:3rem 1rem;
+    margin: 0 3rem;
     margin-bottom: 2rem;
+    flex-wrap: wrap;
 
 
     > div{

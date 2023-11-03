@@ -1,15 +1,31 @@
 import styled from "styled-components";
 
 
-export const CourseContainer = styled.div`
+export const CourseContainer = styled.div `
     display: grid;
-    margin-bottom: 2rem;
+    margin: 0 3rem;
+    margin-bottom: 8rem;
+
+
+    @media screen and (max-width:768px){
+        padding:2rem;
+        margin: 0;
+    }
 
     .header, .sliders {
         display: flex;
         justify-content: space-between;
         align-items: center;
         gap: 1rem;
+
+        h1{
+            @media screen and (max-width:768px){
+              font-size: 1.4rem;
+            }
+            @media screen and (max-width:468px){
+              font-size: 1.2rem;
+            }
+        }
 
         .slider-icons,.course-filter{
             display: flex;

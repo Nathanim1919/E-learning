@@ -5,19 +5,18 @@ export const HeroConatiner = styled.div `
     grid-template-columns: repeat(2, 1fr);
     place-items: center;
     background-color: #eee;
-    padding:0 2rem;
+    padding:1rem 1rem 0 1rem;
     height: 93vh;
     overflow: hidden;
     position: relative;
-    top: 3rem;
+    margin: 0 3rem;
     margin-bottom: 3rem;
 
 
     @media screen and (max-width:768px){
         grid-template-columns: 1fr;
         padding:0 1rem;
-        height: 100vh;
-        overflow-y: auto;
+        margin: 0;
     }
 
     .hero-text{
@@ -26,6 +25,10 @@ export const HeroConatiner = styled.div `
         gap: 1rem;
         position: relative;
         z-index: 2;
+        width: 88%;
+        @media screen and (max-width: 568px) {
+                padding: 3rem 0;
+            }
 
         > *{
             margin: 0;
@@ -37,15 +40,21 @@ export const HeroConatiner = styled.div `
             font-weight: 800;
             line-height: 1.2;
 
+             @media screen and (max-width: 1000px) {
+                font-size: 2rem;
+                font-weight: 800;
+                line-height: 1.2;
+            }
+
             @media screen and (max-width: 768px) {
                 font-size: 2.5rem;
                 font-weight: 800;
                 line-height: 1.2;
             }
 
-            @media screen and (max-width: 468px) {
-                font-size: 1.8rem;
-                font-weight: 800;
+            @media screen and (max-width: 568px) {
+                font-size: 1.4rem;
+                font-weight: 700;
                 line-height: 1.1;
             }
         }
@@ -73,7 +82,7 @@ export const HeroConatiner = styled.div `
             border-radius: 50%;
             position: absolute;
             left: 0;
-            top: 3rem;
+            top: 0rem;
             display: grid;
             place-items: center;
 

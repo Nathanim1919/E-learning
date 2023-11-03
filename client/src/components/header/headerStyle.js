@@ -5,12 +5,8 @@ export const HeaderContainer = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 3rem;
-    position: fixed;
-    z-index: 15;
     background-color: #fff;
-    left: 0;
-    right: 0;
+    margin: 0 3rem;
 
     .list-items, ul{
         display: flex;
@@ -51,7 +47,7 @@ export const HeaderContainer = styled.div`
                 flex-direction: column;
                 position: fixed;
                 background-color: #fff;
-                top: 3rem;
+                top: -300rem;
                 left: 0;
                 padding: 1rem;
                 height: 60vh;
