@@ -9,6 +9,13 @@ import Blog from './components/Blogs/Blog'
 import Testimonial from './components/testimonials/Testimonial'
 import Banner from './components/banner/Banner'
 import Footer from './components/footer/Footer'
+import './App.css'
+import {
+  AiOutlineArrowUp
+} from 'react-icons/ai'
+import {
+  Link
+} from 'react-scroll';
 
 function App() {
  
@@ -25,6 +32,9 @@ function App() {
      <Testimonial/>
      <Banner/>
      <Footer/>
+     <div className='goUP'>
+        <Link to="header" spy={true} smooth={true} offset={0} duration={500}><AiOutlineArrowUp/></Link>
+     </div>
     </>
   )
 }
