@@ -1,4 +1,4 @@
-import React,{useEffect} from 'react'
+import React,{useEffect, useState} from 'react'
 import {
     GrNext,
     GrPrevious
@@ -10,19 +10,28 @@ import {
     BsFillPersonFill,
     BsStar
 } from 'react-icons/bs';
-import Aos from 'aos'
-import 'aos/dist/aos.css'
-import PcourseImg1 from '../../assets/courses/design.jpg'
-import PcourseImg2 from '../../assets/courses/gaming.jpg'
-import PcourseImg3 from '../../assets/courses/photo.jpg'
-import InstructorImg from '../../assets/instructors/instructor.jpg'
+
+import {
+    IoIosArrowUp
+} from 'react-icons/io'
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+import PcourseImg1 from '../../assets/courses/design.jpg';
+import PcourseImg2 from '../../assets/courses/gaming.jpg';
+import PcourseImg3 from '../../assets/courses/photo.jpg';
+import InstructorImg from '../../assets/instructors/instructor.jpg';
+
 
 function Courses() {
+
+const [filterCourse, setFilterCourse] = useState(true)    
+
 useEffect(() => {
     Aos.init({
         duration: 500
     })
 }, [])
+
   return (
     <>
         <CourseContainer>
@@ -30,7 +39,19 @@ useEffect(() => {
                     <h1 data-aos="fade-right">Most popular Courses</h1>
                     <div data-aos="fade=left" className='sliders'>
                         <div className='course-filter'>
-                            <h4>Design</h4><BsChevronDown/>
+                            <h4 onClick={()=>setFilterCourse(!filterCourse)}>Design{!filterCourse? <BsChevronDown/>:<IoIosArrowUp/>}</h4>
+                          {filterCourse &&  <div className='courseTypes' data-aos="zoom-in">
+                                <li>Web design</li>
+                                <li>UX/UI</li>
+                                <li>Python Prohgramming</li>
+                                <li>Back-end Programming</li>
+                                <li>Front-end Programming</li>
+                                <li>Artefitial Intellegence</li>
+                                <li>Machine Learning</li>
+                                <li>Data Science</li>
+                                <li>Game Development</li>
+                                <li>Economics</li>
+                            </div>}
                         </div>
                         <div className='slider-icons'>
                             <div>

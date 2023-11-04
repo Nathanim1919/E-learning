@@ -17,6 +17,8 @@ export const CourseContainer = styled.div `
         justify-content: space-between;
         align-items: center;
         gap: 1rem;
+        position: relative;
+        z-index: 10;
 
         h1{
             @media screen and (max-width:768px){
@@ -32,6 +34,44 @@ export const CourseContainer = styled.div `
             justify-content: center;
             align-items: center;
             gap: .5rem;
+            
+        }
+        .course-filter{
+            cursor: pointer;
+            h4{
+                background-color: rgba(0,0,255,.053);
+                display: flex;
+                padding:.2rem .6rem;
+                justify-content: center;
+                align-items: center;
+                gap: .5rem;
+                color: #333;
+                font-weight: 300;
+                font-size: .9rem;
+            }
+            .courseTypes{
+                background-color: #fff;
+                box-shadow: 0 19px 48px rgba(0,0,0,.07);
+                position: absolute;
+                z-index: 40;
+                top: 4rem;
+                list-style-type: none;
+                color: #333;
+                padding: 1rem;
+                width: 100%;
+                >*{
+                    padding: 0.3rem;
+                    border-bottom: 1px solid #eee;
+                    cursor: pointer;
+                    width: 100%;
+                    font-size: .9rem;
+
+                    &:hover{
+                        background-color: #eee;
+                        color: #000;
+                    }
+                }
+            }
         }
 
         .slider-icons{
