@@ -17,7 +17,7 @@ function Footer() {
 
 useEffect(() => {
     Aos.init({
-        duration: 2000
+        duration: 500
     })
 }, [])
 

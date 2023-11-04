@@ -68,9 +68,80 @@ export const HeroConatiner = styled.div `
 
     .imageContainer{
         position: relative;
-        overflow: hidden;
         padding:2rem 1rem 0 1rem;
         z-index: 1;
+
+        .rightBox, .leftBox, .bottomBox {
+            position: absolute;
+            background-color: #fff;
+            z-index: 10;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 12px 33px rgba(0,0,0,.08);
+            
+            >*{
+                margin:0;
+            }
+        }
+
+        .bottomBox{
+            bottom: 8rem;
+            padding:2rem;
+            align-items:center;
+            right:0rem;
+            border-radius: 10px;
+             box-shadow: 0 22px 53px rgba(0,0,0,.2);
+
+            .icon{
+                font-size: 2rem;
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                background-color: #eee;
+                display: grid;
+                place-items: center;
+                margin-bottom: .5rem;
+            }
+
+            p{
+                font-size: .9rem;
+                font-weight: 300;
+            }
+
+            h2{
+                font-size: 2rem;
+            }
+        }
+
+        .leftBox{
+            top: 8rem;
+            padding: 1.5rem 1rem;
+            border-radius: 10px;
+            border-bottom-right-radius: 0;
+            left: -3rem;
+            align-items: flex-start;
+            font-size:.8rem;
+            font-weight: 300;
+        }
+        
+        .rightBox{
+            top: 2.5rem;
+            padding: 1.5rem 1rem;
+            border-radius: 10px;
+            border-bottom-left-radius: 0;
+            right: 2rem;
+            align-items: center;
+            font-size:.8rem;
+            font-weight: 300;
+
+            span{
+                font-size: .9rem;
+                padding: 0rem .5rem;
+                background-color: pink;
+                border-radius: 20px;
+                font-weight: 400;
+            }
+        }
 
         @media screen and (max-width: 768px){
             padding: 0rem;

@@ -24,19 +24,22 @@ export const HeaderContainer = styled.div`
             font-weight: 500;
             list-style-type: none;
             color: #333;
-           
+            
             >li{
+                padding:0rem .5rem;
                 cursor: pointer;
+                border-radius: 5px;
+                transition: all .1s ease-in-out;
 
                  @media screen and (max-width: 768px){
                     width: 90%;
-                    padding: 1rem;
                     font-size: 1.3rem;
                     font-weight: 600;
                  }
 
-                &:hover{
+                &:hover, .active{
                     background-color: orange;
+                    color: #fff;
                 }
             }
 
@@ -86,7 +89,31 @@ export const HeaderContainer = styled.div`
 
         >div:nth-child(1){
             border-right: 1px solid #eee;
-             padding: 0 .5rem;
+            padding: 0 .5rem;
+            >div{
+                padding: 0;
+                border-radius: 50%;
+                display: grid;
+                place-items: center;
+                width: 30px;
+                height: 30px;
+                position: relative;
+
+                >span{
+                    width: 13px;
+                    height: 13px;
+                    font-weight: 200;
+                    position: absolute;
+                    font-size: .6rem;
+                    border-radius: 50%;
+                    display: grid;
+                    place-items: center;
+                    background-color: orange;
+                    color: #fff;
+                    top: 0;
+                    right: 0;
+                }
+            }
         }
 
         > div{

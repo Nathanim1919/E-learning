@@ -22,15 +22,15 @@ function TrendingCourses() {
 
 useEffect(() => {
     Aos.init({
-        duration: 2000
+        duration: 500
     })
 }, [])
   return (
     <>
         <CourseContainer>
                 <div className='header'>
-                    <h1>Trending Courses</h1>
-                    <div className='sliders'>
+                    <h1  data-aos="fade-right">Trending Courses</h1>
+                    <div data-aos = "fade-left"  className = 'sliders' >
                         <div className='slider-icons'>
                             <div>
                                 <GrPrevious/>

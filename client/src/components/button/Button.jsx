@@ -8,6 +8,10 @@ const MyButton = styled.button`
   padding: 0.5rem 1rem;
   border-radius: 5px;
   cursor: pointer;
+
+  &:hover{
+    opacity: .3;
+  }
 `;
 
 function Button({ text, bgColor, color }) {

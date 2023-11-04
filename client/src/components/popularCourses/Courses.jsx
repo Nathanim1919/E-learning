@@ -20,7 +20,7 @@ import InstructorImg from '../../assets/instructors/instructor.jpg'
 function Courses() {
 useEffect(() => {
     Aos.init({
-        duration: 1000
+        duration: 500
     })
 }, [])
   return (

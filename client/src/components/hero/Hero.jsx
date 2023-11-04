@@ -4,13 +4,16 @@ import heroImage from '../../assets/hero/hero.png'
 import { HeroConatiner } from './heroStyle'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
+import {
+    FcReadingEbook,
+} from 'react-icons/fc'
 
 
 function Hero() {
 
 useEffect(() => {
     Aos.init({
-        duration: 2000
+        duration: 500
     })
 }, [])
   return (
@@ -26,6 +29,24 @@ useEffect(() => {
         </div>
 
         <div div className = 'imageContainer' >
+
+                <div data-aos="fade-left" className='rightBox'>
+                    <span>New</span>
+                    <p>Get 20% off in every course.</p>
+                </div>
+
+                <div data-aos="fade-right" className='leftBox'>
+                    <p>Largest collection in every courses.</p>
+                    <p>Expert instructors.</p>
+                </div>
+                <div data-aos="zoom-in" className='bottomBox'>
+                   <div className='icon'>
+                        < FcReadingEbook/>
+                   </div>
+                   <p>Total Students</p>
+                   <h2>15K</h2>
+                </div>
+
                 <div className='dotted-circle' data-aos="zoom-in">
                     <div className='orange-circle'>
                         <div className='innerCircle'>

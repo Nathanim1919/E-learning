@@ -35,7 +35,7 @@ export const CourseContainer = styled.div `
         }
 
         .slider-icons{
-            gap: 0;
+            gap: .5rem;
         }
 
         .slider-icons > *{
@@ -45,6 +45,7 @@ export const CourseContainer = styled.div `
             display: grid;
             place-items: center;
             cursor: pointer;
+            background-color: #eee;
         }
 
           

@@ -32,8 +32,11 @@ function Header () {
 
         <div className='call-icons'>
           <div>
-            <FiSearch />
-            <FiShoppingCart />
+            <div> <FiSearch /></div>
+            <div>
+               <span>3</span> 
+               <FiShoppingCart />
+            </div>
           </div>
 
           <div>
