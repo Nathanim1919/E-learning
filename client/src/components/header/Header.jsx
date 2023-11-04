@@ -3,6 +3,7 @@ import { FiSearch, FiShoppingCart } from 'react-icons/fi'
 import Button from '../button/Button'
 import { HeaderContainer } from './headerStyle'
 import {AiOutlineClose} from 'react-icons/ai';
+import { Link } from 'react-scroll';
 
 function Header () {
   
@@ -21,12 +22,21 @@ function Header () {
             <div className='close-icon'>
                 <AiOutlineClose/>
             </div>
-            <li>About</li>
-            <li>Courses</li>
-            <li>Blog</li>
-            <li>Reviews</li>
-            <li>Instructor</li>
-
+            <li>
+              <Link to="about" spy={true} smooth={true} offset={0} duration={500}>About</Link>
+            </li>
+            <li>
+              <Link to="courses" spy={true} smooth={true} offset={0} duration={500}>Courses</Link>
+            </li>
+            <li>
+              <Link to="blog" spy={true} smooth={true} offset={0} duration={500}>Blog</Link>
+            </li>
+            <li>
+              <Link to="reviews" spy={true} smooth={true} offset={0} duration={500}>Reviews</Link>
+            </li>
+            <li>
+              <Link to="instructor" spy={true} smooth={true} offset={0} duration={500}>Instructor</Link>
+            </li>
           </ul>
         </div>
 

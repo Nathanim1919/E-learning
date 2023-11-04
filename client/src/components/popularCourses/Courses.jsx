@@ -24,7 +24,7 @@ import InstructorImg from '../../assets/instructors/instructor.jpg';
 
 function Courses() {
 
-const [filterCourse, setFilterCourse] = useState(true)    
+const [filterCourse, setFilterCourse] = useState(false)    
 
 useEffect(() => {
     Aos.init({
@@ -35,7 +35,7 @@ useEffect(() => {
   return (
     <>
         <CourseContainer>
-                <div className='header'>
+                <div className='header' id='courses'>
                     <h1 data-aos="fade-right">Most popular Courses</h1>
                     <div data-aos="fade=left" className='sliders'>
                         <div className='course-filter'>

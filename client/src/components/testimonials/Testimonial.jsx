@@ -14,7 +14,7 @@ function Testimonial() {
   return (
     <>
     <TestimonialContainer >
-        <h1>What our students say</h1>
+        <h1 id='reviews'>What our students say</h1>
         <div className='testimonials'>
             <div data-aos="zoom-in">
                 <p>"You only have to know one thing that, you can learn anything, Anytime, anywhere to do discover yourself. Our content will help you every step, Anytime, anywhere to do discover yourself.</p>

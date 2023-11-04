@@ -19,7 +19,7 @@ function Blog() {
   return (
     <>
     <PostContainer>
-        <div>
+        <div id='blog'>
             <h1 data-aos="fade-right">Our Latest Posts</h1>
             <Button text={'More details'} bgColor={'blue'} color={'#fff'}/>
         </div>

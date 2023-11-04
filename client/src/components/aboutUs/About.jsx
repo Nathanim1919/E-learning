@@ -22,7 +22,7 @@ function About() {
   }, [])
   return (
     <>
-      <AboutContaienr>
+      <AboutContaienr id='about'>
             <div className='getTOKnow' data-aos="fade-right">
               <h1>Get Know About Us</h1>
                 <div className='description-text'>
